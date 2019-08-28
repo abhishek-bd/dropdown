@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
   data: any;
@@ -11,37 +11,165 @@ export class HomeComponent implements OnInit {
 
   incomingData = [
     {
-      text: 'Baby Care',
-      value: 'babyCare',
+      text: "Baby Care",
+      value: "babyCare",
       selected: false,
       children: [
-        { text: 'Baby Skin', value: 'babySkin', selected: false },
-        { text: 'Baby Hygiene', value: 'babyHygiene', selected: false },
-        { text: 'Baby Ciaper', value: 'babyDiaper', selected: false }
+        { text: "Baby Skin", value: "babySkin", selected: false },
+        { text: "Baby Hygeine", value: "babyHygiene", selected: false },
+        { text: "Baby Oral Care", value: "babyOralCare", selected: false }
       ]
     },
     {
-      text: 'Baby Gear',
-      value: 'babyGear',
+      text: "Baby Gear",
+      value: "babyGear",
       selected: false,
       children: [
-        { text: 'Baby Sleep', value: 'babyKnife', selected: false },
-        { text: 'Baby pull', value: 'babyPull', selected: false },
-        { text: 'Baby push', value: 'babyPush', selected: false }
+        { text: "Gears", value: "gears", selected: false },
+        { text: "Feeding", value: "feeding", selected: false },
+        { text: "Baby Sleep", value: "babySleep", selected: false }
       ]
     },
     {
-      text: 'Sleep',
-      value: 'babySleep',
+      text: "Women's Lifestyle",
+      value: "womensLifestyle",
       selected: false,
       children: [
-        { text: 'Sleep', value: 'sleep', selected: false },
-        { text: 'kill', value: 'kill', selected: false }
+        { text: "Women Hygiene", value: "womenHygiene", selected: false },
+        {
+          text: "Women Skin & Beauty",
+          value: "womenSkinBeauty",
+          selected: false
+        },
+        {
+          text: "Women Health Issues",
+          value: "womenHealthIssues",
+          selected: false
+        },
+        { text: "Women Nutrition", value: "womenNutrition", selected: false },
+        { text: "Women Hair", value: "womenHair", selected: false },
+        { text: "Women Fashion", value: "womenFashion", selected: false },
+        { text: "Women Fitness", value: "womenFitness", selected: false }
       ]
     },
     {
-      text: 'Other',
-      value: 'other',
+      text: "Nutrition",
+      value: "nutrition",
+      selected: false,
+      children: [
+        { text: "Infant Nutrition", value: "infantNutrition", selected: false },
+        {
+          text: "Toddler nutrition",
+          value: "toddlerNutrition",
+          selected: false
+        }
+      ]
+    },
+    {
+      text: "Diapering",
+      value: "daipering",
+      selected: false,
+      children: [
+        { text: "Diapers", value: "diapers", selected: false },
+        {
+          text: "Wipes",
+          value: "wipes",
+          selected: false
+        }
+      ]
+    },
+    {
+      text: "Feeding",
+      value: "feeding",
+      selected: false,
+      children: [
+        { text: "Infant Non Solid Nutrition", value: "infantNonSolidNutrition", selected: false },
+        {
+          text: "Breastfeeding",
+          value: "breastfeeding",
+          selected: false
+        },
+        {
+          text: "DHA",
+          value: "dha",
+          selected: false
+        }
+      ]
+    },
+    {
+      text: "Pregnancy",
+      value: "pregnancy",
+      selected: false,
+      children: [
+        {
+          text: "Pregnancy",
+          value: "regnancy",
+          selected: false
+        }
+      ]
+    },
+    {
+      text: "Development",
+      value: "development",
+      selected: false,
+      children: [
+        { text: "Toys", value: "toys", selected: false },
+        {
+          text: "Books",
+          value: "books",
+          selected: false
+        },
+        {
+          text: "Training",
+          value: "training",
+          selected: false
+        }
+      ]
+    },
+    {
+      text: "Sleep",
+      value: "sleep",
+      selected: false,
+      children: [
+        {
+          text: "Baby Sleep",
+          value: "babySleep",
+          selected: false
+        }
+      ]
+    },
+    {
+      text: "Immunity",
+      value: "immunity",
+      selected: false,
+      children: [
+        {
+          text: "Immunity",
+          value: "immunity",
+          selected: false
+        },
+        {
+          text: "Cold & Cough",
+          value: "coldCough",
+          selected: false
+        }
+      ]
+    },
+    {
+      text: "Digestion",
+      value: "digestion",
+      selected: false,
+      children: [
+        {
+          text: "Digestion",
+          value: "digestion",
+          selected: false
+        }
+      ]
+    },
+    {
+      text: "Others",
+      value: "others",
       selected: false,
       children: []
     }

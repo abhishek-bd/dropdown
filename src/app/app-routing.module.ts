@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path: 'datepicker',
+    loadChildren: () => import('./ios-picker/ios-picker.module').then(m => m.IosPickerModule)
   }
 ];
 
