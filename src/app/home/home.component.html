@@ -1,0 +1,53 @@
+<input type="text" (keyup)="filterString($event.target.value)" />
+
+
+<ul class="ul-list">
+  <li *ngFor="let d of filteredData; let i = index">
+    <div class="parent-list">
+      <input
+        class="checkbox-custom"
+        name="checkAll"
+        type="checkbox"
+        id="{{ d?.text }}"
+        [checked]="d?.selected"
+        (click)="ToggleChips(d?.value, i, -1)"
+      /><label
+        for="{{ d?.text }}"
+        class="checkbox-custom-label checkbox"
+        (click)="ToggleChips(d?.value, i, -1)"
+      >
+        <div class="data">
+          {{ d?.text }} {{ d?.selected }}
+          <ul class="ul-list">
+            <li *ngFor="let e of d?.children; let j = index">
+              <input
+                class="checkbox-custom"
+                name="checkAll"
+                type="checkbox"
+                id="{{ e?.text }}"
+                [checked]="e?.selected"
+                (click)="ToggleChips(e?.value, i, j); $event.stopPropagation()"
+              /><label
+                for="{{ e?.text }}"
+                class="checkbox-custom-label checkbox"
+                (click)="ToggleChips(e?.value, i, j); $event.stopPropagation()"
+              >
+                <div class="data">{{ e?.text }} {{ e?.selected }}</div>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </label>
+    </div>
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let r of rows; let k = index">
+    {{ r?.value }}
+    <button (click)="ToggleChips(r?.value, r?.i, r?.j)">
+      Remove
+    </button>
+  </li>
+</ul>
+
